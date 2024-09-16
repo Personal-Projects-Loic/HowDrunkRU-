@@ -8,5 +8,5 @@
 import SwiftUI
 
 class AppData: ObservableObject {
-    @Published var alcoholLevel: Float = 0.0
+    @Published var alcohol: Float = 1.26
 }

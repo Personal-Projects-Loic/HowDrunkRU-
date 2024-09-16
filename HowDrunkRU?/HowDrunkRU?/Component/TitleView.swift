@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleComponent: View {
+struct TitleView: View {
     var body : some View {
         HStack() {
             Text("HowDrunkRU?")
@@ -19,5 +19,5 @@ struct TitleComponent: View {
 }
 
 #Preview {
-    TitleComponent()
+    TitleView()
 }

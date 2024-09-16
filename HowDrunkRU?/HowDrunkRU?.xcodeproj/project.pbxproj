@@ -13,7 +13,8 @@
 		A502C7132C9877BB00A06E78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A502C7122C9877BB00A06E78 /* Preview Assets.xcassets */; };
 		A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */; };
 		A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71D2C98787400A06E78 /* AlcoholLevel.swift */; };
-		A502C7202C98788C00A06E78 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71F2C98788C00A06E78 /* TitleComponent.swift */; };
+		A502C7202C98788C00A06E78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71F2C98788C00A06E78 /* TitleView.swift */; };
+		A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,8 @@
 		A502C7122C9877BB00A06E78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorUI+Extension.swift"; sourceTree = "<group>"; };
 		A502C71D2C98787400A06E78 /* AlcoholLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevel.swift; sourceTree = "<group>"; };
-		A502C71F2C98788C00A06E78 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
+		A502C71F2C98788C00A06E78 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 		A502C71C2C98784F00A06E78 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A502C71F2C98788C00A06E78 /* TitleComponent.swift */,
+				A502C71F2C98788C00A06E78 /* TitleView.swift */,
+				A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -162,8 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */,
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
-				A502C7202C98788C00A06E78 /* TitleComponent.swift in Sources */,
+				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,

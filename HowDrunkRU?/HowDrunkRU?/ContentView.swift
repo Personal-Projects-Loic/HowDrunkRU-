@@ -14,8 +14,9 @@ struct ContentView: View {
         ZStack {
             Color(UIColor.lightPurple)
                 .ignoresSafeArea()
-            TitleComponent()
+            TitleView()
                 .colorInvert()
+            AlcoholLevelView()
         }
     }
 }
