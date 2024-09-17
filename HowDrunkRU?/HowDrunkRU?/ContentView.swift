@@ -9,15 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var appState: AppData
-
+    
     var body: some View {
-        ZStack {
-            Color(UIColor.lightPurple)
-                .ignoresSafeArea()
-            TitleView()
-                .colorInvert()
-            AlcoholLevelView()
+        NavigationStack {
+            TabView {
+                HomePage()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                ProfilePage()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+            }
         }
+        .tint(Color.init(UIColor.lightYellow))
+        
+        //.onAppear {
+            //UITabBar.appearance().backgroundColor = UIColor.lightYellow
+        //}
     }
 }
 

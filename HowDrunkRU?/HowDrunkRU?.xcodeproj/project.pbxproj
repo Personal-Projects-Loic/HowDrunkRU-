@@ -15,6 +15,10 @@
 		A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71D2C98787400A06E78 /* AlcoholLevel.swift */; };
 		A502C7202C98788C00A06E78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71F2C98788C00A06E78 /* TitleView.swift */; };
 		A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */; };
+		A502C7242C9973BF00A06E78 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7232C9973BF00A06E78 /* AddButton.swift */; };
+		A502C72A2C99842800A06E78 /* myFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A502C7272C99798B00A06E78 /* myFont.ttf */; };
+		A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72C2C9988D100A06E78 /* HomePage.swift */; };
+		A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72E2C998E3B00A06E78 /* ProfilePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,11 @@
 		A502C71D2C98787400A06E78 /* AlcoholLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevel.swift; sourceTree = "<group>"; };
 		A502C71F2C98788C00A06E78 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevelView.swift; sourceTree = "<group>"; };
+		A502C7232C9973BF00A06E78 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		A502C7272C99798B00A06E78 /* myFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = myFont.ttf; path = "../../../../../../Downloads/Atop Font/myFont.ttf"; sourceTree = "<group>"; };
+		A502C7292C997A5000A06E78 /* HowDrunkRU--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowDrunkRU--Info.plist"; sourceTree = SOURCE_ROOT; };
+		A502C72C2C9988D100A06E78 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		A502C72E2C998E3B00A06E78 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 		A502C6FF2C9877BA00A06E78 = {
 			isa = PBXGroup;
 			children = (
+				A502C7292C997A5000A06E78 /* HowDrunkRU--Info.plist */,
 				A502C70A2C9877BA00A06E78 /* HowDrunkRU? */,
 				A502C7092C9877BA00A06E78 /* Products */,
 			);
@@ -59,6 +69,8 @@
 		A502C70A2C9877BA00A06E78 /* HowDrunkRU? */ = {
 			isa = PBXGroup;
 			children = (
+				A502C7252C9977D100A06E78 /* project_font */,
+				A502C72B2C9988BD00A06E78 /* Pages */,
 				A502C71C2C98784F00A06E78 /* Component */,
 				A502C7192C98782600A06E78 /* Extensions */,
 				A502C70B2C9877BA00A06E78 /* HowDrunkRU_App.swift */,
@@ -91,8 +103,26 @@
 			children = (
 				A502C71F2C98788C00A06E78 /* TitleView.swift */,
 				A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */,
+				A502C7232C9973BF00A06E78 /* AddButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		A502C7252C9977D100A06E78 /* project_font */ = {
+			isa = PBXGroup;
+			children = (
+				A502C7272C99798B00A06E78 /* myFont.ttf */,
+			);
+			path = project_font;
+			sourceTree = "<group>";
+		};
+		A502C72B2C9988BD00A06E78 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				A502C72C2C9988D100A06E78 /* HomePage.swift */,
+				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A502C72A2C99842800A06E78 /* myFont.ttf in Resources */,
 				A502C7132C9877BB00A06E78 /* Preview Assets.xcassets in Resources */,
 				A502C7102C9877BB00A06E78 /* Assets.xcassets in Resources */,
 			);
@@ -165,9 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */,
 				A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */,
+				A502C7242C9973BF00A06E78 /* AddButton.swift in Sources */,
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
+				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
@@ -307,6 +341,7 @@
 				DEVELOPMENT_TEAM = CGRKZ83X82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HowDrunkRU--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -336,6 +371,7 @@
 				DEVELOPMENT_TEAM = CGRKZ83X82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HowDrunkRU--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

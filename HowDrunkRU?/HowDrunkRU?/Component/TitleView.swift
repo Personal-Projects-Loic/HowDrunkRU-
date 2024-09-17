@@ -10,10 +10,12 @@ import SwiftUI
 struct TitleView: View {
     var body : some View {
         HStack() {
-            Text("HowDrunkRU?")
-                .font(.largeTitle.bold())
+            Text("Drink together")
+                .font(Font.custom("myFont.ttf", size: 56))
+                .fontWeight(.semibold)
+                .foregroundStyle(Color.init(UIColor.lightYellow))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .frame(maxWidth: .infinity, alignment: .top)
         
     }
 }

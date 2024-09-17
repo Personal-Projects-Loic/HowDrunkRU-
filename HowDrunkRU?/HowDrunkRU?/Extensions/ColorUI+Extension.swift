@@ -8,7 +8,10 @@
 import UIKit
 
 extension UIColor {
-    public class var lightPurple: UIColor {
-        return UIColor(red: 163/255, green: 145/255, blue: 182/255, alpha: 1.0)
+    public class var lightYellow: UIColor {
+        return UIColor(red: 216/255, green: 155/255, blue: 35/255, alpha: 1.0)
+    }
+    public class var lightBlack: UIColor {
+        return UIColor(red: 59/255, green: 59/255, blue: 59/255, alpha: 1.0 )
     }
 }
