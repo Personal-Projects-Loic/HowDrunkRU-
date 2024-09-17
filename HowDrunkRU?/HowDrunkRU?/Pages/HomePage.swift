@@ -17,10 +17,11 @@ struct HomePage: View {
             VStack(alignment: .center, spacing: 40) {
                 TitleView(title: "Drink together")
                 AlcoholLevelView()
+                AddButton()
+                MyList()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .padding()
-            AddButton()
         }
     }
 }

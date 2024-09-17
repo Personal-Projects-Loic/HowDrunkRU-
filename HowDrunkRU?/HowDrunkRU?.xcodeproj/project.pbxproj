@@ -20,6 +20,8 @@
 		A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72C2C9988D100A06E78 /* HomePage.swift */; };
 		A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72E2C998E3B00A06E78 /* ProfilePage.swift */; };
 		A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7322C9998BC00A06E78 /* GamePage.swift */; };
+		A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7342C99C67500A06E78 /* ProfilePicture.swift */; };
+		A502C7372C99D0FA00A06E78 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7362C99D0FA00A06E78 /* MyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A502C72C2C9988D100A06E78 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A502C72E2C998E3B00A06E78 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		A502C7322C9998BC00A06E78 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
+		A502C7342C99C67500A06E78 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		A502C7362C99D0FA00A06E78 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				A502C71F2C98788C00A06E78 /* TitleView.swift */,
 				A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */,
 				A502C7232C9973BF00A06E78 /* AddButton.swift */,
+				A502C7342C99C67500A06E78 /* ProfilePicture.swift */,
+				A502C7362C99D0FA00A06E78 /* MyList.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -204,9 +210,11 @@
 				A502C7242C9973BF00A06E78 /* AddButton.swift in Sources */,
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
+				A502C7372C99D0FA00A06E78 /* MyList.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
+				A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
 			);

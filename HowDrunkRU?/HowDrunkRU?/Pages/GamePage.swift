@@ -12,7 +12,11 @@ struct GamePage: View {
         ZStack {
             Color(UIColor.lightBlack)
                 .ignoresSafeArea()
-            TitleView(title: "Game Page")
+            TitleView(title: "Game page")
         }
     }
+}
+
+#Preview {
+    GamePage()
 }

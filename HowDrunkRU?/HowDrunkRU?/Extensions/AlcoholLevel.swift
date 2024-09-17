@@ -9,4 +9,5 @@ import SwiftUI
 
 class AppData: ObservableObject {
     @Published var alcohol: Float = 1.26
+    @Published var multiplicator: Int = 1
 }
