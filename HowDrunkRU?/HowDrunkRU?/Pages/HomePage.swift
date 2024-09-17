@@ -15,7 +15,7 @@ struct HomePage: View {
             Color(UIColor.lightBlack)
                 .ignoresSafeArea()
             VStack(alignment: .center, spacing: 40) {
-                TitleView()
+                TitleView(title: "Drink together")
                 AlcoholLevelView()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

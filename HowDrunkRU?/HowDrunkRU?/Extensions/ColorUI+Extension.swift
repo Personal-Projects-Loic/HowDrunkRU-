@@ -14,4 +14,7 @@ extension UIColor {
     public class var lightBlack: UIColor {
         return UIColor(red: 59/255, green: 59/255, blue: 59/255, alpha: 1.0 )
     }
+    public class var brokenWhite: UIColor {
+        return UIColor(red: 248/255, green: 247/255, blue: 243/255, alpha: 1.0 )
+    }
 }

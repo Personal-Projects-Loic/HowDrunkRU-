@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct TitleView: View {
+    var title: String
+    
     var body : some View {
         HStack() {
-            Text("Drink together")
+            Text(title)
                 .font(Font.custom("myFont.ttf", size: 56))
                 .fontWeight(.semibold)
                 .foregroundStyle(Color.init(UIColor.lightYellow))
@@ -21,5 +23,5 @@ struct TitleView: View {
 }
 
 #Preview {
-    TitleView()
+    TitleView(title: "Drink together")
 }

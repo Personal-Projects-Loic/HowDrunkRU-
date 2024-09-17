@@ -19,6 +19,7 @@
 		A502C72A2C99842800A06E78 /* myFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A502C7272C99798B00A06E78 /* myFont.ttf */; };
 		A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72C2C9988D100A06E78 /* HomePage.swift */; };
 		A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72E2C998E3B00A06E78 /* ProfilePage.swift */; };
+		A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7322C9998BC00A06E78 /* GamePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A502C7292C997A5000A06E78 /* HowDrunkRU--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowDrunkRU--Info.plist"; sourceTree = SOURCE_ROOT; };
 		A502C72C2C9988D100A06E78 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A502C72E2C998E3B00A06E78 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		A502C7322C9998BC00A06E78 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				A502C72C2C9988D100A06E78 /* HomePage.swift */,
 				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
+				A502C7322C9998BC00A06E78 /* GamePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
+				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
