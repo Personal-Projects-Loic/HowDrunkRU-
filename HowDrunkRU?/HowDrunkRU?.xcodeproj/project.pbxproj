@@ -90,8 +90,8 @@
 		A502C70A2C9877BA00A06E78 /* HowDrunkRU? */ = {
 			isa = PBXGroup;
 			children = (
-				A5286E562C9B1337001FC8D0 /* AuthManager */,
 				A502C7252C9977D100A06E78 /* project_font */,
+				A5286E562C9B1337001FC8D0 /* AuthManager */,
 				A502C72B2C9988BD00A06E78 /* Pages */,
 				A502C71C2C98784F00A06E78 /* Component */,
 				A502C7192C98782600A06E78 /* Extensions */,

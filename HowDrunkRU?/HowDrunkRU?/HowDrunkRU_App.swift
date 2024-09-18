@@ -11,7 +11,6 @@ import FirebaseCore
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-      FirebaseApp.configure()
     return true
   }
 }
@@ -20,13 +19,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct HowDrunkRUApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var appData = AppData()
-    //@StateObject var authManager: AuthManager
+    @StateObject var authManager: AuthManager
+    
+    init() {
+            FirebaseApp.configure()
+            let authManager = AuthManager()
+            _authManager = StateObject(wrappedValue: authManager)
+        }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(appData)
-                //.environmentObject(authManager)
+                .environmentObject(authManager)
         }
     }
 }

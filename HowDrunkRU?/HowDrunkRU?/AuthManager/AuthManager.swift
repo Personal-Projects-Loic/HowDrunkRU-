@@ -48,4 +48,30 @@ class AuthManager: ObservableObject {
             self.authState = .signedOut
         }
     }
+    
+    func signInAnonymously() async throws -> AuthDataResult? {
+        do {
+            let result = try await Auth.auth().signInAnonymously()
+            print("FirebaseAuthSuccess: Sign in anonymously, UID:(\(String(describing: result.user.uid)))")
+            return result
+        }
+        catch {
+            print("FirebaseAuthError: failed to sign in anonymously: \(error.localizedDescription)")
+            throw error
+        }
+    }
+    
+    func signOut() async throws {
+        if let user = Auth.auth().currentUser {
+            do {
+                // TODO: Sign out from signed-in Provider.
+                try Auth.auth().signOut()
+            }
+            catch let error as NSError {
+                print("FirebaseAuthError: failed to sign out from Firebase, \(error)")
+                throw error
+            }
+        }
+    }
+
 }
