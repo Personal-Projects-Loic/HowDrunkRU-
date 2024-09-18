@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyList: View {
+struct MyListView: View {
     var body: some View {
         VStack {
             List {
@@ -15,16 +15,16 @@ struct MyList: View {
                         .foregroundColor(Color.init(UIColor.lightYellow)),
                         content: {
                         Label("1 : Jean-Jaques était a 3,56g", systemImage: "person.fill")
-                            .foregroundColor(Color.init(UIColor.lightYellow))
+                        .foregroundColor(Color.init(UIColor.brokenWhite))
                             .listRowBackground(Color.init(UIColor.lightBlack))
                         Label("2 : Loïc était a 3,32g", systemImage: "person.fill")
-                            .foregroundColor(Color.init(UIColor.lightYellow))
+                            .foregroundColor(Color.init(UIColor.brokenWhite))
                             .listRowBackground(Color.init(UIColor.lightBlack))
                         Label("3 : Thomas était a 2,46g", systemImage: "person.fill")
-                            .foregroundColor(Color.init(UIColor.lightYellow))
+                            .foregroundColor(Color.init(UIColor.brokenWhite))
                             .listRowBackground(Color.init(UIColor.lightBlack))
                         Label("4 : Pierre était a 1,89g", systemImage: "person.fill")
-                            .foregroundColor(Color.init(UIColor.lightYellow))
+                            .foregroundColor(Color.init(UIColor.brokenWhite))
                             .listRowBackground(Color.init(UIColor.lightBlack))
                 }
                 )
@@ -37,5 +37,5 @@ struct MyList: View {
 }
 
 #Preview {
-    MyList()
+    MyListView()
 }

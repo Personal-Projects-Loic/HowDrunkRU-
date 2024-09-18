@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfilePicture: View {
+struct ProfilePictureView: View {
     var body: some View {
         VStack {
             Image("blank-pp")
@@ -26,5 +26,5 @@ struct ProfilePicture: View {
 
 
 #Preview {
-    ProfilePicture()
+    ProfilePictureView()
 }

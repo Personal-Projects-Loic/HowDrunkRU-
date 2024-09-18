@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomePage: View {
+struct HomePageView: View {
     @EnvironmentObject var alcoholLevel: AppData
 
     var body: some View {
@@ -18,7 +18,7 @@ struct HomePage: View {
                 TitleView(title: "Drink together", top: true)
                 AlcoholLevelView()
                 AddButton()
-                MyList()
+                MyListView()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .padding()
@@ -27,6 +27,6 @@ struct HomePage: View {
 }
 
 #Preview {
-    HomePage()
+    HomePageView()
         .environmentObject(AppData())
 }

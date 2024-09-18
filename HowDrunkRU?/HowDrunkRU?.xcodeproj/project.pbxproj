@@ -15,16 +15,19 @@
 		A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71D2C98787400A06E78 /* AlcoholLevel.swift */; };
 		A502C7202C98788C00A06E78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71F2C98788C00A06E78 /* TitleView.swift */; };
 		A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */; };
-		A502C7242C9973BF00A06E78 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7232C9973BF00A06E78 /* AddButton.swift */; };
+		A502C7242C9973BF00A06E78 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7232C9973BF00A06E78 /* AddButtonView.swift */; };
 		A502C72A2C99842800A06E78 /* myFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A502C7272C99798B00A06E78 /* myFont.ttf */; };
 		A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72C2C9988D100A06E78 /* HomePage.swift */; };
 		A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C72E2C998E3B00A06E78 /* ProfilePage.swift */; };
 		A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7322C9998BC00A06E78 /* GamePage.swift */; };
-		A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7342C99C67500A06E78 /* ProfilePicture.swift */; };
-		A502C7372C99D0FA00A06E78 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7362C99D0FA00A06E78 /* MyList.swift */; };
+		A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7342C99C67500A06E78 /* ProfilePictureView.swift */; };
+		A502C7372C99D0FA00A06E78 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7362C99D0FA00A06E78 /* MyListView.swift */; };
 		A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */; };
 		A5286E4E2C9AD9DA001FC8D0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5286E4D2C9AD9DA001FC8D0 /* FirebaseAnalytics */; };
 		A5286E502C9ADB57001FC8D0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A5286E4F2C9ADB57001FC8D0 /* FirebaseAuth */; };
+		A5286E532C9AF64C001FC8D0 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E522C9AF637001FC8D0 /* TextFieldView.swift */; };
+		A5286E552C9B0727001FC8D0 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E542C9B0722001FC8D0 /* LoginPage.swift */; };
+		A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E572C9B1343001FC8D0 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,15 +40,18 @@
 		A502C71D2C98787400A06E78 /* AlcoholLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevel.swift; sourceTree = "<group>"; };
 		A502C71F2C98788C00A06E78 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevelView.swift; sourceTree = "<group>"; };
-		A502C7232C9973BF00A06E78 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		A502C7232C9973BF00A06E78 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		A502C7272C99798B00A06E78 /* myFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = myFont.ttf; path = "../../../../../../Downloads/Atop Font/myFont.ttf"; sourceTree = "<group>"; };
 		A502C7292C997A5000A06E78 /* HowDrunkRU--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HowDrunkRU--Info.plist"; sourceTree = SOURCE_ROOT; };
 		A502C72C2C9988D100A06E78 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A502C72E2C998E3B00A06E78 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		A502C7322C9998BC00A06E78 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
-		A502C7342C99C67500A06E78 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
-		A502C7362C99D0FA00A06E78 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		A502C7342C99C67500A06E78 /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
+		A502C7362C99D0FA00A06E78 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistiquePage.swift; sourceTree = "<group>"; };
+		A5286E522C9AF637001FC8D0 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		A5286E542C9B0722001FC8D0 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		A5286E572C9B1343001FC8D0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		A502C70A2C9877BA00A06E78 /* HowDrunkRU? */ = {
 			isa = PBXGroup;
 			children = (
+				A5286E562C9B1337001FC8D0 /* AuthManager */,
 				A502C7252C9977D100A06E78 /* project_font */,
 				A502C72B2C9988BD00A06E78 /* Pages */,
 				A502C71C2C98784F00A06E78 /* Component */,
@@ -113,11 +120,12 @@
 		A502C71C2C98784F00A06E78 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A5286E522C9AF637001FC8D0 /* TextFieldView.swift */,
 				A502C71F2C98788C00A06E78 /* TitleView.swift */,
 				A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */,
-				A502C7232C9973BF00A06E78 /* AddButton.swift */,
-				A502C7342C99C67500A06E78 /* ProfilePicture.swift */,
-				A502C7362C99D0FA00A06E78 /* MyList.swift */,
+				A502C7232C9973BF00A06E78 /* AddButtonView.swift */,
+				A502C7342C99C67500A06E78 /* ProfilePictureView.swift */,
+				A502C7362C99D0FA00A06E78 /* MyListView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -133,12 +141,21 @@
 		A502C72B2C9988BD00A06E78 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				A5286E542C9B0722001FC8D0 /* LoginPage.swift */,
 				A502C72C2C9988D100A06E78 /* HomePage.swift */,
 				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
 				A502C7322C9998BC00A06E78 /* GamePage.swift */,
 				A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		A5286E562C9B1337001FC8D0 /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				A5286E572C9B1343001FC8D0 /* AuthManager.swift */,
+			);
+			path = AuthManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,16 +234,19 @@
 			files = (
 				A502C72F2C998E3B00A06E78 /* ProfilePage.swift in Sources */,
 				A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */,
-				A502C7242C9973BF00A06E78 /* AddButton.swift in Sources */,
+				A502C7242C9973BF00A06E78 /* AddButtonView.swift in Sources */,
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
-				A502C7372C99D0FA00A06E78 /* MyList.swift in Sources */,
+				A502C7372C99D0FA00A06E78 /* MyListView.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
+				A5286E532C9AF64C001FC8D0 /* TextFieldView.swift in Sources */,
+				A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
-				A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */,
+				A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */,
+				A5286E552C9B0727001FC8D0 /* LoginPage.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

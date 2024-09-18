@@ -12,7 +12,7 @@ struct ProfilePage: View {
         ZStack {
             Color(UIColor.lightBlack)
                 .ignoresSafeArea()
-            ProfilePicture()
+            ProfilePictureView()
         }
     }
 }
