@@ -11,7 +11,7 @@ struct AddButton: View {
     var body: some View {
         Group{
                 Button(action: {
-                    print("tapped!")
+                    
                 }, label: {
                      Image("bottle")
                         .resizable()

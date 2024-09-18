@@ -15,7 +15,7 @@ struct HomePage: View {
             Color(UIColor.lightBlack)
                 .ignoresSafeArea()
             VStack(alignment: .center, spacing: 40) {
-                TitleView(title: "Drink together")
+                TitleView(title: "Drink together", top: true)
                 AlcoholLevelView()
                 AddButton()
                 MyList()

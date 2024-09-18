@@ -6,9 +6,21 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+}
 
 struct ContentView: View {
     @EnvironmentObject var appState: AppData
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor.brokenWhite
@@ -27,6 +39,12 @@ struct ContentView: View {
                         Image(systemName: "gamecontroller.fill")
                         Text("Games")
                     }
+                StatistiquePage()
+                    .tabItem {
+                        Image(systemName: "slider.vertical.3")
+                        Text("Statistiques")
+                    }
+
                 ProfilePage()
                     .tabItem {
                         Image(systemName: "person")

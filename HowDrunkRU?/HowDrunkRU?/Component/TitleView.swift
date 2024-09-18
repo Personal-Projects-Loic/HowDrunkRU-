@@ -9,19 +9,30 @@ import SwiftUI
 
 struct TitleView: View {
     var title: String
+    var top: Bool
     
     var body : some View {
-        HStack() {
-            Text(title)
-                .font(Font.custom("myFont.ttf", size: 56))
-                .fontWeight(.semibold)
-                .foregroundStyle(Color.init(UIColor.lightYellow))
+        if (top == true) {
+            HStack() {
+                Text(title)
+                    .font(Font.custom("myFont.ttf", size: 56))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.init(UIColor.lightYellow))
+            }
+            .frame(maxWidth: .infinity, alignment: .top)
+        } else {
+            HStack() {
+                Text(title)
+                    .font(Font.custom("myFont.ttf", size: 56))
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.init(UIColor.lightYellow))
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
         }
-        .frame(maxWidth: .infinity, alignment: .top)
         
     }
 }
 
 #Preview {
-    TitleView(title: "Drink together")
+    TitleView(title: "Drink together", top: true)
 }

@@ -22,6 +22,9 @@
 		A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7322C9998BC00A06E78 /* GamePage.swift */; };
 		A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7342C99C67500A06E78 /* ProfilePicture.swift */; };
 		A502C7372C99D0FA00A06E78 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7362C99D0FA00A06E78 /* MyList.swift */; };
+		A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */; };
+		A5286E4E2C9AD9DA001FC8D0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5286E4D2C9AD9DA001FC8D0 /* FirebaseAnalytics */; };
+		A5286E502C9ADB57001FC8D0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A5286E4F2C9ADB57001FC8D0 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,7 @@
 		A502C7322C9998BC00A06E78 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		A502C7342C99C67500A06E78 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		A502C7362C99D0FA00A06E78 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistiquePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5286E4E2C9AD9DA001FC8D0 /* FirebaseAnalytics in Frameworks */,
+				A5286E502C9ADB57001FC8D0 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +136,7 @@
 				A502C72C2C9988D100A06E78 /* HomePage.swift */,
 				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
 				A502C7322C9998BC00A06E78 /* GamePage.swift */,
+				A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -178,6 +185,9 @@
 				Base,
 			);
 			mainGroup = A502C6FF2C9877BA00A06E78;
+			packageReferences = (
+				A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A502C7092C9877BA00A06E78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,6 +226,7 @@
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A502C7352C99C67500A06E78 /* ProfilePicture.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
+				A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */,
 				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +435,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5286E4D2C9AD9DA001FC8D0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A5286E4F2C9ADB57001FC8D0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A502C7002C9877BA00A06E78 /* Project object */;
 }
