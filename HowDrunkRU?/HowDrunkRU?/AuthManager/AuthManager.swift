@@ -5,9 +5,10 @@
 //  Created by Loïc Rouzaud on 18/09/2024.
 //
 
-import AuthenticationServices
+import Foundation
 import FirebaseAuth
-import FirebaseCore
+import SwiftUI
+import AuthenticationServices
 
 enum AuthState {
     case authenticated // Anonymously authenticated in Firebase.
@@ -17,9 +18,13 @@ enum AuthState {
 
 @MainActor
 class AuthManager: ObservableObject {
-    @Published var user: User?
-    @Published var authState = AuthState.signedOut
-    
+    @Published var authState: AuthState = .signedOut
+    @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var user: FirebaseAuth.User?
+    @Published var hasError = false
+    @Published var errorMessage = ""
+
     private var authStateHandle: AuthStateDidChangeListenerHandle!
 
     init() {
@@ -28,16 +33,11 @@ class AuthManager: ObservableObject {
 
     func configureAuthStateChanges() {
         authStateHandle = Auth.auth().addStateDidChangeListener { auth, user in
-            print("Auth changed: \(user != nil)")
             self.updateState(user: user)
         }
     }
 
-    func removeAuthStateListener() {
-        Auth.auth().removeStateDidChangeListener(authStateHandle)
-    }
-
-    func updateState(user: User?) {
+    func updateState(user: FirebaseAuth.User?) {
         self.user = user
         let isAuthenticatedUser = user != nil
         let isAnonymous = user?.isAnonymous ?? false
@@ -48,29 +48,47 @@ class AuthManager: ObservableObject {
             self.authState = .signedOut
         }
     }
-    
-    func signInAnonymously() async throws -> AuthDataResult? {
+
+    func signInWithEmailPassword() async {
+        hasError = false
         do {
-            let result = try await Auth.auth().signInAnonymously()
-            print("FirebaseAuthSuccess: Sign in anonymously, UID:(\(String(describing: result.user.uid)))")
-            return result
-        }
-        catch {
-            print("FirebaseAuthError: failed to sign in anonymously: \(error.localizedDescription)")
-            throw error
+            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            updateState(user: authResult.user)
+            print("Email sign-in successful: \(authResult.user.email ?? "")")
+        } catch {
+            hasError = true
+            errorMessage = error.localizedDescription
+            print("Email sign-in error: \(error.localizedDescription)")
         }
     }
-    
-    func signOut() async throws {
-        if Auth.auth().currentUser != nil {
-            do {
-                // TODO: sign out from signed-in provider
-                try Auth.auth().signOut()
-            }
-            catch let error as NSError {
-                print("FirebaseAuthError: failed to sign out from Firebase, \(error)")
-                throw error
-            }
+
+    func signInAnonymously() async {
+        hasError = false
+        do {
+            let result = try await Auth.auth().signInAnonymously()
+            print("Anonymous sign-in successful, UID: \(result.user.uid)")
+            updateState(user: result.user)
+        } catch {
+            hasError = true
+            errorMessage = error.localizedDescription
+            print("Anonymous sign-in error: \(error.localizedDescription)")
         }
+    }
+
+    func signOut() async {
+        hasError = false
+        do {
+            try Auth.auth().signOut()
+            updateState(user: nil)
+            print("Sign-out successful")
+        } catch {
+            hasError = true
+            errorMessage = error.localizedDescription
+            print("Sign-out error: \(error.localizedDescription)")
+        }
+    }
+
+    deinit {
+        Auth.auth().removeStateDidChangeListener(authStateHandle)
     }
 }

@@ -15,12 +15,15 @@ struct TextFieldView: View {
     var body: some View {
       ZStack {
         TextField("", text: $data)
+              .foregroundColor(Color.init(UIColor.brokenWhite))
           .padding(.horizontal, 10)
           .frame(height: 42)
           .overlay(
             RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
                 .stroke(Color.init(UIColor.brokenWhite), lineWidth: 1)
           )
+          .autocapitalization(.none)
+          .keyboardType(.emailAddress)
         HStack {
           Text(title ?? "Input")
             .font(.headline)

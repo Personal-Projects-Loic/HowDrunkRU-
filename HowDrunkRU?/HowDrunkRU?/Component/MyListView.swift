@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyListView: View {
+    
     var body: some View {
         VStack {
             List {

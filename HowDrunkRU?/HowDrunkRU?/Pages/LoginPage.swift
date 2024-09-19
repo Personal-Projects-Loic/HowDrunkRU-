@@ -1,26 +1,14 @@
-//
-//  LoginPage.swift
-//  HowDrunkRU?
-//
-//  Created by Loïc Rouzaud on 18/09/2024.
-//
-
 import SwiftUI
 import AuthenticationServices
 
 struct LoginPage: View {
-    @State var username: String = ""
-    @State var password: String = ""
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authManager: AuthManager
     @State private var showingAlert = false
 
-
     var body: some View {
         NavigationStack {
-            
-            
             ZStack {
                 Color(UIColor.lightBlack)
                     .ignoresSafeArea()
@@ -30,11 +18,23 @@ struct LoginPage: View {
                         .fontWeight(.bold)
                         .padding(.bottom, 42)
                         .foregroundStyle(Color.init(UIColor.lightYellow))
+
                     VStack(spacing: 16.0) {
-                        TextFieldView(data: $username, title: "Username")
-                        TextFieldView(data: $password, title: "Password")
+                        // Utilisation de TextFieldView pour l'email
+                        TextFieldView(data: $authManager.email, title: "Email")
+                        
+                        // Utilisation de TextFieldView pour le mot de passe
+                        TextFieldView(data: $authManager.password, title: "Password")
                     }
-                    Button(action: {}) {
+
+                    Button(action: {
+                        Task {
+                            await authManager.signInWithEmailPassword()
+                            if authManager.authState == .signedIn {
+                                showingAlert = true
+                            }
+                        }
+                    }) {
                         Text("Sign In")
                             .fontWeight(.heavy)
                             .font(.title3)
@@ -45,7 +45,7 @@ struct LoginPage: View {
                             .cornerRadius(40)
                             .padding(.bottom, 16)
                     }
-                    .padding(.top, 16)
+
                     HStack {
                         SignInWithAppleButton(
                             onRequest: { request in
@@ -57,6 +57,7 @@ struct LoginPage: View {
                         )
                         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                         .frame(width: 140, height: 35, alignment: .center)
+
                         SignInWithAppleButton(
                             onRequest: { request in
                                 // TODO: Request Apple Authorization
@@ -68,36 +69,33 @@ struct LoginPage: View {
                         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                         .frame(width: 140, height: 35, alignment: .center)
                     }
-                    Button {
-                        Task {
-                            await signAnonymously()
+
+                    if authManager.authState == .signedOut {
+                        Button {
+                            Task {
+                                await authManager.signInAnonymously()
+                            }
+                        } label: {
+                            Text("Skip")
+                                .font(.body.bold())
+                                .frame(width: 280, height: 45, alignment: .center)
                         }
-                    } label: {
-                        Text("Skip")
-                            .font(.body.bold())
-                            .frame(width: 280, height: 45, alignment: .center)
                     }
                 }
                 .padding(30)
             }
-            .alert("You signed in as anonymous", isPresented: $showingAlert) {
+            .alert("Sign-in successful", isPresented: $showingAlert) {
+                Button("OK", role: .cancel) {}
+            }
+            .alert(authManager.errorMessage, isPresented: $authManager.hasError) {
                 Button("OK", role: .cancel) {}
             }
         }
     }
-    
-    func signAnonymously() async {
-        do {
-            _ = try await authManager.signInAnonymously()
-            print("Anonymous sign-in successful")
-        } catch {
-            print("SignInAnonymouslyError: \(error)")
-        }
-    }
 }
-
 
 #Preview {
     LoginPage()
         .environmentObject(AuthManager())
 }
+
