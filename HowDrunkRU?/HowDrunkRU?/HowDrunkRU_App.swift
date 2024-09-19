@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseFirestore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -24,6 +25,7 @@ struct HowDrunkRUApp: App {
     init() {
             FirebaseApp.configure()
             let authManager = AuthManager()
+            let db = Firestore.firestore()
             _authManager = StateObject(wrappedValue: authManager)
         }
     

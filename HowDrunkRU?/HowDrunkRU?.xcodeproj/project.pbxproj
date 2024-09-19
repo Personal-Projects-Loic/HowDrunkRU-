@@ -30,6 +30,10 @@
 		A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E572C9B1343001FC8D0 /* AuthManager.swift */; };
 		A5871C282C9B298300A642BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5871C272C9B298300A642BA /* GoogleService-Info.plist */; };
 		A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5871C2B2C9B735800A642BA /* SignOutButton.swift */; };
+		A5CD6EBA2C9C676800CFF8D6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A5CD6EB92C9C676800CFF8D6 /* FirebaseFirestore */; };
+		A5CD6EBC2C9C7B8900CFF8D6 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */; };
+		A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */; };
+		A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,9 @@
 		A5286E572C9B1343001FC8D0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A5871C272C9B298300A642BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5871C2B2C9B735800A642BA /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
+		A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
+		A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			files = (
 				A5286E4E2C9AD9DA001FC8D0 /* FirebaseAnalytics in Frameworks */,
 				A5286E502C9ADB57001FC8D0 /* FirebaseAuth in Frameworks */,
+				A5CD6EBA2C9C676800CFF8D6 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A502C7252C9977D100A06E78 /* project_font */,
-				A5286E562C9B1337001FC8D0 /* AuthManager */,
+				A5286E562C9B1337001FC8D0 /* Manager */,
 				A502C72B2C9988BD00A06E78 /* Pages */,
 				A502C71C2C98784F00A06E78 /* Component */,
 				A502C7192C98782600A06E78 /* Extensions */,
@@ -116,6 +124,7 @@
 		A502C7192C98782600A06E78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */,
 				A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */,
 				A502C71D2C98787400A06E78 /* AlcoholLevel.swift */,
 			);
@@ -147,6 +156,7 @@
 		A502C72B2C9988BD00A06E78 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholList.swift */,
 				A5286E542C9B0722001FC8D0 /* LoginPage.swift */,
 				A502C72C2C9988D100A06E78 /* HomePage.swift */,
 				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
@@ -156,12 +166,13 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		A5286E562C9B1337001FC8D0 /* AuthManager */ = {
+		A5286E562C9B1337001FC8D0 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */,
 				A5286E572C9B1343001FC8D0 /* AuthManager.swift */,
 			);
-			path = AuthManager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,13 +256,16 @@
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
 				A502C7372C99D0FA00A06E78 /* MyListView.swift in Sources */,
+				A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholList.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
 				A5286E532C9AF64C001FC8D0 /* TextFieldView.swift in Sources */,
 				A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */,
+				A5CD6EBC2C9C7B8900CFF8D6 /* Alcohol.swift in Sources */,
 				A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */,
+				A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */,
 				A5286E552C9B0727001FC8D0 /* LoginPage.swift in Sources */,
@@ -486,6 +500,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		A5CD6EB92C9C676800CFF8D6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5286E4C2C9AD9DA001FC8D0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
