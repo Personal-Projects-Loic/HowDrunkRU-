@@ -29,6 +29,7 @@
 		A5286E552C9B0727001FC8D0 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E542C9B0722001FC8D0 /* LoginPage.swift */; };
 		A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5286E572C9B1343001FC8D0 /* AuthManager.swift */; };
 		A5871C282C9B298300A642BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5871C272C9B298300A642BA /* GoogleService-Info.plist */; };
+		A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5871C2B2C9B735800A642BA /* SignOutButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A5286E542C9B0722001FC8D0 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		A5286E572C9B1343001FC8D0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A5871C272C9B298300A642BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A5871C2B2C9B735800A642BA /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		A502C71C2C98784F00A06E78 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A5871C2B2C9B735800A642BA /* SignOutButton.swift */,
 				A5286E522C9AF637001FC8D0 /* TextFieldView.swift */,
 				A502C71F2C98788C00A06E78 /* TitleView.swift */,
 				A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */,
@@ -247,6 +250,7 @@
 				A5286E532C9AF64C001FC8D0 /* TextFieldView.swift in Sources */,
 				A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
+				A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */,
 				A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
 				A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */,

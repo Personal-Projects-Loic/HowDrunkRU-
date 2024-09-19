@@ -14,6 +14,7 @@ struct LoginPage: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authManager: AuthManager
+    @State private var showingAlert = false
 
 
     var body: some View {
@@ -79,12 +80,15 @@ struct LoginPage: View {
                 }
                 .padding(30)
             }
+            .alert("You signed in as anonymous", isPresented: $showingAlert) {
+                Button("OK", role: .cancel) {}
+            }
         }
     }
     
     func signAnonymously() async {
         do {
-            let _result = try await authManager.signInAnonymously()
+            _ = try await authManager.signInAnonymously()
             print("Anonymous sign-in successful")
         } catch {
             print("SignInAnonymouslyError: \(error)")

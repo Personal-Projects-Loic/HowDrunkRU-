@@ -62,9 +62,8 @@ class AuthManager: ObservableObject {
     }
     
     func signOut() async throws {
-        if let user = Auth.auth().currentUser {
+        if Auth.auth().currentUser != nil {
             do {
-                // TODO: Sign out from signed-in Provider.
                 try Auth.auth().signOut()
             }
             catch let error as NSError {
@@ -73,5 +72,4 @@ class AuthManager: ObservableObject {
             }
         }
     }
-
 }
