@@ -87,6 +87,17 @@ class AuthManager: ObservableObject {
             print("Sign-out error: \(error.localizedDescription)")
         }
     }
+    
+    func regularCreateAccount(email: String, password: String) {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                    
+                } else {
+                    print("Successfully created password account")
+                }
+            }
+        }
 
     deinit {
         Auth.auth().removeStateDidChangeListener(authStateHandle)

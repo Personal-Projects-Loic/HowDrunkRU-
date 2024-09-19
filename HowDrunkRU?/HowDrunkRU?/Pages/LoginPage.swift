@@ -21,29 +21,45 @@ struct LoginPage: View {
 
                     VStack(spacing: 16.0) {
                         // Utilisation de TextFieldView pour l'email
-                        TextFieldView(data: $authManager.email, title: "Email")
+                        TextFieldView(data: $authManager.email, title: "Email", isSecure: false)
                         
                         // Utilisation de TextFieldView pour le mot de passe
-                        TextFieldView(data: $authManager.password, title: "Password")
+                        TextFieldView(data: $authManager.password, title: "Password", isSecure: true)
                     }
-
-                    Button(action: {
-                        Task {
-                            await authManager.signInWithEmailPassword()
-                            if authManager.authState == .signedIn {
-                                showingAlert = true
+                    
+                    HStack {
+                        Button(action: {
+                            Task {
+                                await authManager.signInWithEmailPassword()
+                                if authManager.authState == .signedIn {
+                                    showingAlert = true
+                                }
                             }
+                        }) {
+                            Text("Sign in")
+                                .fontWeight(.heavy)
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.init(UIColor.lightYellow), Color.init(UIColor.lightYellow)]), startPoint: .leading, endPoint: .trailing))
+                                .cornerRadius(40)
+                                .padding(.bottom, 16)
                         }
-                    }) {
-                        Text("Sign In")
-                            .fontWeight(.heavy)
-                            .font(.title3)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.init(UIColor.lightYellow), Color.init(UIColor.lightYellow)]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(40)
-                            .padding(.bottom, 16)
+                        Button(action: {
+                                authManager.regularCreateAccount(email: authManager.email, password: authManager.password)
+                        }) {
+                            Text("Sign up")
+                                .fontWeight(.heavy)
+                                .font(.title3)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.init(UIColor.lightYellow), Color.init(UIColor.lightYellow)]), startPoint: .leading, endPoint: .trailing))
+                                .cornerRadius(40)
+                                .padding(.bottom, 16)
+                        }
+                        
                     }
 
                     HStack {
@@ -69,7 +85,7 @@ struct LoginPage: View {
                         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                         .frame(width: 140, height: 35, alignment: .center)
                     }
-
+                    
                     if authManager.authState == .signedOut {
                         Button {
                             Task {

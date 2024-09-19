@@ -19,8 +19,10 @@ struct ProfilePage: View {
                 if authManager.authState == .signedIn {
                     Text(authManager.user?.displayName ?? "Name placeholder")
                         .font(.headline)
+                        .foregroundColor(Color.init(UIColor.brokenWhite))
                     Text(authManager.user?.email ?? "Email placeholder")
-                        .font(.subheadline)
+                        .font(.title)
+                        .foregroundColor(Color.init(UIColor.brokenWhite))
                 }
                 else {
                     Text("Sign-in to view data!")
