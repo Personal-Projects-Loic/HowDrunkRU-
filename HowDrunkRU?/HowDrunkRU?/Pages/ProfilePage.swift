@@ -15,7 +15,20 @@ struct ProfilePage: View {
             Color(UIColor.lightBlack)
                 .ignoresSafeArea()
             ProfilePictureView()
-            SignOutButton()
+            VStack(alignment: .center) {
+                if authManager.authState == .signedIn {
+                    Text(authManager.user?.displayName ?? "Name placeholder")
+                        .font(.headline)
+                    Text(authManager.user?.email ?? "Email placeholder")
+                        .font(.subheadline)
+                }
+                else {
+                    Text("Sign-in to view data!")
+                        .font(.headline)
+                }
+                SignOutButton()
+            }
+            
         }
     }
 }
