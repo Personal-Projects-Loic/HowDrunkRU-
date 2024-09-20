@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AlcoholListView: View {
     @EnvironmentObject var dataManager: DataManager
+    @State private var showAlcoholSheet = false
     
     var body: some View {
         NavigationView {
@@ -17,10 +18,14 @@ struct AlcoholListView: View {
             }
             .navigationTitle("Alcohol List")
             .navigationBarItems(trailing: Button(action: {
-                // Action pour ajouter un nouvel alcool
+                showAlcoholSheet.toggle()
             }, label: {
                 Image(systemName: "plus")
             }))
+            .sheet(isPresented: $showAlcoholSheet) {
+                NewAlcoholView()
+                    .presentationDetents([.medium, .large])
+            }
         }
     }
 }
