@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var appState: AppData
     @EnvironmentObject var authManager: AuthManager
+    @EnvironmentObject var dataManager: DataManager
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor.brokenWhite
@@ -54,4 +55,5 @@ struct ContentView: View {
     ContentView()
         .environmentObject(AppData())
         .environmentObject(AuthManager())
+        .environmentObject(DataManager())
 }

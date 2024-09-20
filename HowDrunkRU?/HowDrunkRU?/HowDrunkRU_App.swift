@@ -21,11 +21,11 @@ struct HowDrunkRUApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var appData = AppData()
     @StateObject var authManager: AuthManager
+    @StateObject var dataManager = DataManager()
     
     init() {
             FirebaseApp.configure()
             let authManager = AuthManager()
-            let db = Firestore.firestore()
             _authManager = StateObject(wrappedValue: authManager)
         }
     
@@ -34,6 +34,7 @@ struct HowDrunkRUApp: App {
             ContentView()
                 .environmentObject(appData)
                 .environmentObject(authManager)
+                .environmentObject(dataManager)
         }
     }
 }
