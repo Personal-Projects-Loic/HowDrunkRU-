@@ -17,7 +17,7 @@ struct ProfilePage: View {
     @State private var isEditing: Bool = false
     @State private var showingNoDataAlert: Bool = false
     var sizeTitle: String = "Enter your size"
-    var wieghtTitle: String = "Enter your size"
+    var weightTitle: String = "Enter your weight"
 
     var body: some View {
         ZStack {
@@ -27,25 +27,55 @@ struct ProfilePage: View {
                 if authManager.authState == .signedIn {
                     ProfilePictureView()
                     
-                    TextField("Your size: ", value: $dataManager.userInfos.size, formatter: NumberFormatter())
-                        .foregroundColor(Color(UIColor.brokenWhite))
-                        .padding(.horizontal, 10)
-                        .frame(height: 42)
-                        .overlay(
-                            RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
-                                .stroke(Color(UIColor.brokenWhite), lineWidth: 1)
-                        )
+                    ZStack {
+                        TextField("Your size:", text: $sizeInput)
+                            .foregroundColor(Color(UIColor.brokenWhite))
+                            .padding(.horizontal, 10)
+                            .frame(height: 42)
+                            .keyboardType(.numberPad)
+                            .overlay(
+                                RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
+                                    .stroke(Color(UIColor.brokenWhite), lineWidth: 1)
+                            )
+                        HStack {
+                            Text("Entrer your size")
+                                .font(.headline)
+                                .fontWeight(.thin)
+                                .foregroundColor(Color.init(UIColor.brokenWhite))
+                                .multilineTextAlignment(.leading)
+                                .padding(4)
+                                .background(Color.init(UIColor.lightBlack))
+                            Spacer()
+                        }
+                        .padding(.leading, 8)
+                        .offset(CGSize(width: 0, height: -20))
+                    }
+                    .padding(4)
                     
-                    TextField("Your weight: ", value: $dataManager.userInfos.weight, formatter: NumberFormatter())
-                        .foregroundColor(Color(UIColor.brokenWhite))
-                        .padding(.horizontal, 10)
-                        .frame(height: 42)
-                        .overlay(
-                            RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
-                                .stroke(Color(UIColor.brokenWhite), lineWidth: 1)
-                        )
-                    
-                    MyButton(userSize: dataManager.userInfos.size, userWeight: dataManager.userInfos.weight)
+                    ZStack {
+                        TextField("Your weight:", text: $weightInput)
+                            .foregroundColor(Color(UIColor.brokenWhite))
+                            .padding(.horizontal, 10)
+                            .frame(height: 42)
+                            .keyboardType(.numberPad)
+                            .overlay(
+                                RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
+                                    .stroke(Color(UIColor.brokenWhite), lineWidth: 1)
+                            )
+                        HStack {
+                            Text("Entrer your weight")
+                                .font(.headline)
+                                .fontWeight(.thin)
+                                .foregroundColor(Color.init(UIColor.brokenWhite))
+                                .multilineTextAlignment(.leading)
+                                .padding(4)
+                                .background(Color.init(UIColor.lightBlack))
+                            Spacer()
+                        }
+                        .padding(.leading, 8)
+                        .offset(CGSize(width: 0, height: -20))
+                    }
+                    MyButton(userSize: Int(sizeInput) ?? 0, userWeight: Int(weightInput) ?? 0)
                     
                     Text(authManager.user?.displayName ?? "Name placeholder")
                         .font(.headline)
