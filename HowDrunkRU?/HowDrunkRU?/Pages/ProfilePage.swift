@@ -8,6 +8,7 @@ struct ProfilePage: View {
 
     @State private var sizeInput: String = ""
     @State private var weightInput: String = ""
+    @State private var genderInput: String = ""
     @State private var isEditing: Bool = false
     @State private var userInfos: UserInfos?
 
@@ -29,6 +30,9 @@ struct ProfilePage: View {
                         Text("Your weight: \(userInfos.weight)")
                             .foregroundColor(Color(UIColor.brokenWhite))
 
+                        Text("Your Gender: \(userInfos.gender)")
+                            .foregroundColor(Color(UIColor.brokenWhite))
+                        
                         Button("Edit Infos") {
                             isEditing.toggle()
                             sizeInput = String(userInfos.size)
@@ -43,8 +47,9 @@ struct ProfilePage: View {
 
                         InputField(title: "Your size:", text: $sizeInput)
                         InputField(title: "Your weight:", text: $weightInput)
+                        InputField(title: "Your gender:", text: $genderInput)
 
-                        MyButton(userSize: Int(sizeInput) ?? 0, userWeight: Int(weightInput) ?? 0) {
+                        MyButton(userSize: Int(sizeInput) ?? 0, userWeight: Int(weightInput) ?? 0, userGender: genderInput) {
                             isEditing = false
                             fetchUserData()
                         }
@@ -69,6 +74,7 @@ struct ProfilePage: View {
             if let userInfos = fetchedUserInfos {
                 self.sizeInput = String(userInfos.size)
                 self.weightInput = String(userInfos.weight)
+                self.genderInput = userInfos.gender
             }
         }
     }
@@ -84,7 +90,6 @@ struct InputField: View {
                 .foregroundColor(Color(UIColor.brokenWhite))
                 .padding(.horizontal, 10)
                 .frame(height: 42)
-                .keyboardType(.numberPad)
                 .overlay(
                     RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
                         .stroke(Color(UIColor.brokenWhite), lineWidth: 1)

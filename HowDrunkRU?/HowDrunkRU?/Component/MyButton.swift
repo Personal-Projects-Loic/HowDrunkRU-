@@ -6,6 +6,7 @@ struct MyButton: View {
     @State private var alertMessage = ""
     var userSize: Int
     var userWeight: Int
+    var userGender: String
     var onComplete: () -> Void
 
     var body: some View {
@@ -34,20 +35,25 @@ struct MyButton: View {
     }
 
     func validateInputs() {
+        let validGenders = ["homme", "femme", "Homme", "Femme"]
+
         if userSize <= 0 {
             alertMessage = "Please enter a valid size."
             showingAlert = true
         } else if userWeight <= 0 {
             alertMessage = "Please enter a valid weight."
             showingAlert = true
+        } else if !validGenders.contains(userGender) {
+            alertMessage = "Please enter a valid gender."
+            showingAlert = true
         } else {
-            dataManager.addInfos(size: userSize, weight: userWeight)
+            dataManager.addInfos(size: userSize, weight: userWeight, gender: userGender)
             onComplete()
         }
     }
 }
 
 #Preview {
-    MyButton(userSize: 180, userWeight: 70, onComplete: {})
+    MyButton(userSize: 180, userWeight: 70, userGender: "homme", onComplete: {})
         .environmentObject(DataManager())
 }

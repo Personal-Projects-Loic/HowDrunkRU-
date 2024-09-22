@@ -31,7 +31,7 @@
 		A5871C282C9B298300A642BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5871C272C9B298300A642BA /* GoogleService-Info.plist */; };
 		A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5871C2B2C9B735800A642BA /* SignOutButton.swift */; };
 		A5CD6EBA2C9C676800CFF8D6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A5CD6EB92C9C676800CFF8D6 /* FirebaseFirestore */; };
-		A5CD6EBC2C9C7B8900CFF8D6 /* Alcohol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */; };
+		A5CD6EBC2C9C7B8900CFF8D6 /* Delcaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */; };
 		A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */; };
 		A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */; };
 		A5CD6EC22C9DAB5100CFF8D6 /* SignButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */; };
@@ -63,7 +63,7 @@
 		A5286E572C9B1343001FC8D0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A5871C272C9B298300A642BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5871C2B2C9B735800A642BA /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
-		A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alcohol.swift; sourceTree = "<group>"; };
+		A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delcaration.swift; sourceTree = "<group>"; };
 		A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholListView.swift; sourceTree = "<group>"; };
 		A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonView.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		A502C7192C98782600A06E78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */,
+				A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */,
 				A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */,
 			);
 			path = Extensions;
@@ -275,7 +275,7 @@
 				A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */,
 				A502C70E2C9877BA00A06E78 /* ContentView.swift in Sources */,
 				A5871C2C2C9B738000A642BA /* SignOutButton.swift in Sources */,
-				A5CD6EBC2C9C7B8900CFF8D6 /* Alcohol.swift in Sources */,
+				A5CD6EBC2C9C7B8900CFF8D6 /* Delcaration.swift in Sources */,
 				A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */,
 				A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,

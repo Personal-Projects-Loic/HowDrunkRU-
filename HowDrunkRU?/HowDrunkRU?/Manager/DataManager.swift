@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class DataManager: ObservableObject {
     @Published var alcohol: [Alcohol] = []
-    @Published var userInfos: UserInfos = UserInfos(id: "", size: 0, weight: 0)
+    @Published var userInfos: UserInfos = UserInfos(id: "", size: 0, weight: 0, gender: "")
     
     init() {
         fetchAlcohol()
@@ -82,9 +82,10 @@ class DataManager: ObservableObject {
         }
     }
     
-    func updateUserInfos(size: Int, weight: Int) {
-            self.userInfos.size = size
-            self.userInfos.weight = weight
+    func updateUserInfos(size: Int, weight: Int, gender: String) {
+        self.userInfos.size = size
+        self.userInfos.weight = weight
+        self.userInfos.gender = gender
     }
         
     func fetchUserInfos(uid: String, completion: @escaping (UserInfos?) -> Void) {
@@ -96,14 +97,16 @@ class DataManager: ObservableObject {
                 let data = document.data()
                 let size = data?["size"] as? Int ?? 0
                 let weight = data?["weight"] as? Int ?? 0
-                completion(UserInfos(id: uid, size: size, weight: weight))
+                let gender = data?["gender"] as? String ?? ""
+    
+                completion(UserInfos(id: uid, size: size, weight: weight, gender: gender))
             } else {
                 completion(nil)
             }
         }
     }
     
-    func addInfos(size: Int, weight: Int) {
+    func addInfos(size: Int, weight: Int, gender: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let db = Firestore.firestore()
         let ref = db.collection("Users").document(uid)
@@ -111,7 +114,8 @@ class DataManager: ObservableObject {
         let userData: [String: Any] = [
             "id": uid,
             "size": size,
-            "weight": weight
+            "weight": weight,
+            "gender": gender
         ]
         
         ref.setData(userData, merge: true) { error in

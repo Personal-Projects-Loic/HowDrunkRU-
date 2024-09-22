@@ -18,4 +18,5 @@ struct UserInfos: Identifiable {
     var id: String
     var size: Int
     var weight: Int
+    var gender: String
 }
