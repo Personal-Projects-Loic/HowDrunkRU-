@@ -8,6 +8,8 @@
 import SwiftUI
 
 class AppData: ObservableObject {
-    @Published var alcohol: Float = 1.26
+    @Published var alcohol: Float = 0.00
     @Published var multiplicator: Int = 1
+    @Published var size: Int = 0
+    @Published var weight: Int = 0
 }

@@ -20,10 +20,7 @@ struct LoginPage: View {
                         .foregroundStyle(Color.init(UIColor.lightYellow))
 
                     VStack(spacing: 16.0) {
-                        // Utilisation de TextFieldView pour l'email
                         TextFieldView(data: $authManager.email, title: "Email", isSecure: false)
-                        
-                        // Utilisation de TextFieldView pour le mot de passe
                         TextFieldView(data: $authManager.password, title: "Password", isSecure: true)
                     }
                     

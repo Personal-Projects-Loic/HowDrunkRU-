@@ -13,3 +13,9 @@ struct Alcohol: Identifiable {
     var percentage: String
     var type: String
 }
+
+struct UserInfos: Identifiable {
+    var id: String
+    var size: Int
+    var weight: Int
+}

@@ -7,9 +7,11 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 class DataManager: ObservableObject {
     @Published var alcohol: [Alcohol] = []
+    @Published var userInfos: UserInfos = UserInfos(id: "", size: 0, weight: 0)
     
     init() {
         fetchAlcohol()
@@ -19,7 +21,8 @@ class DataManager: ObservableObject {
         alcohol.removeAll()
         let db = Firestore.firestore()
         let ref = db.collection("Alcohol")
-        ref.getDocuments() { snapshot, error in
+    
+        ref.getDocuments { snapshot, error in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return
@@ -78,6 +81,46 @@ class DataManager: ObservableObject {
             }
         }
     }
-
+    
+    func updateUserInfos(size: Int, weight: Int) {
+            self.userInfos.size = size
+            self.userInfos.weight = weight
+    }
+        
+    func fetchUserInfos(uid: String, completion: @escaping (UserInfos?) -> Void) {
+        let db = Firestore.firestore()
+        let ref = db.collection("Users").document(uid)
+        
+        ref.getDocument { document, error in
+            if let document = document, document.exists {
+                let data = document.data()
+                let size = data?["size"] as? Int ?? 0
+                let weight = data?["weight"] as? Int ?? 0
+                completion(UserInfos(id: uid, size: size, weight: weight))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func addInfos(size: Int, weight: Int) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        let ref = db.collection("Users").document(uid)
+        
+        let userData: [String: Any] = [
+            "id": uid,
+            "size": size,
+            "weight": weight
+        ]
+        
+        ref.setData(userData, merge: true) { error in
+            if let error = error {
+                print("Error adding user data: \(error.localizedDescription)")
+            } else {
+                print("User data successfully added!")
+            }
+        }
+    }
 
 }

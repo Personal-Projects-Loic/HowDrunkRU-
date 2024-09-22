@@ -36,6 +36,7 @@
 		A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */; };
 		A5CD6EC22C9DAB5100CFF8D6 /* SignButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */; };
 		A5EFE3B62C9DB51900B54E98 /* NewAlcoholView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */; };
+		A5EFE3B92CA032BF00B54E98 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B82CA032BB00B54E98 /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholListView.swift; sourceTree = "<group>"; };
 		A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonView.swift; sourceTree = "<group>"; };
 		A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlcoholView.swift; sourceTree = "<group>"; };
+		A5EFE3B82CA032BB00B54E98 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,6 @@
 			children = (
 				A5CD6EBB2C9C7B8200CFF8D6 /* Alcohol.swift */,
 				A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */,
-				A502C71D2C98787400A06E78 /* AlcoholLevel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,6 +139,7 @@
 		A502C71C2C98784F00A06E78 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A5EFE3B82CA032BB00B54E98 /* MyButton.swift */,
 				A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */,
 				A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */,
 				A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */,
@@ -177,6 +179,7 @@
 			children = (
 				A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */,
 				A5286E572C9B1343001FC8D0 /* AuthManager.swift */,
+				A502C71D2C98787400A06E78 /* AlcoholLevel.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListView.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
+				A5EFE3B92CA032BF00B54E98 /* MyButton.swift in Sources */,
 				A5CD6EC22C9DAB5100CFF8D6 /* SignButtonView.swift in Sources */,
 				A5286E532C9AF64C001FC8D0 /* TextFieldView.swift in Sources */,
 				A5286E582C9B1348001FC8D0 /* AuthManager.swift in Sources */,
