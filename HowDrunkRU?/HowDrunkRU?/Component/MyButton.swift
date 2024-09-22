@@ -1,10 +1,3 @@
-//
-//  MyButton.swift
-//  HowDrunkRU?
-//
-//  Created by Loïc Rouzaud on 22/09/2024.
-//
-
 import SwiftUI
 
 struct MyButton: View {
@@ -13,7 +6,8 @@ struct MyButton: View {
     @State private var alertMessage = ""
     var userSize: Int
     var userWeight: Int
-    
+    var onComplete: () -> Void
+
     var body: some View {
         HStack {
             Button(action: {
@@ -38,7 +32,7 @@ struct MyButton: View {
             )
         }
     }
-    
+
     func validateInputs() {
         if userSize <= 0 {
             alertMessage = "Please enter a valid size."
@@ -48,11 +42,12 @@ struct MyButton: View {
             showingAlert = true
         } else {
             dataManager.addInfos(size: userSize, weight: userWeight)
+            onComplete()
         }
     }
 }
 
 #Preview {
-    MyButton(userSize: 180, userWeight: 70)
+    MyButton(userSize: 180, userWeight: 70, onComplete: {})
         .environmentObject(DataManager())
 }
