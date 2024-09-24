@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct AlcoholLevelView: View {
-    @EnvironmentObject var alcoholLevel: AppData
+    @EnvironmentObject var appData: AppData
     
     var body: some View {
         VStack {
-            Text("\(alcoholLevel.alcohol, specifier: "%.2f")g")
+            Text("\(appData.alcohol, specifier: "%.2f")g")
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .foregroundStyle(Color.init(UIColor.lightYellow))
                 .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
             
-            switch alcoholLevel.alcohol {
+            switch appData.alcohol {
             case 0:
                 Text("You're sober, gg")
                     .foregroundStyle(Color.init(UIColor.lightYellow))

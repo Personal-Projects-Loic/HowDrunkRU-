@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomePageView: View {
     @EnvironmentObject var alcoholLevel: AppData
-    
     var body: some View {
         ZStack {
             Color(UIColor.lightBlack)

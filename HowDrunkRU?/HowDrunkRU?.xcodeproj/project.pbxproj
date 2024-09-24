@@ -12,7 +12,7 @@
 		A502C7102C9877BB00A06E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A502C70F2C9877BB00A06E78 /* Assets.xcassets */; };
 		A502C7132C9877BB00A06E78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A502C7122C9877BB00A06E78 /* Preview Assets.xcassets */; };
 		A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */; };
-		A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71D2C98787400A06E78 /* AlcoholLevel.swift */; };
+		A502C71E2C98787400A06E78 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71D2C98787400A06E78 /* AppData.swift */; };
 		A502C7202C98788C00A06E78 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C71F2C98788C00A06E78 /* TitleView.swift */; };
 		A502C7222C987FF100A06E78 /* AlcoholLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */; };
 		A502C7242C9973BF00A06E78 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A502C7232C9973BF00A06E78 /* AddButtonView.swift */; };
@@ -37,6 +37,7 @@
 		A5CD6EC22C9DAB5100CFF8D6 /* SignButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */; };
 		A5EFE3B62C9DB51900B54E98 /* NewAlcoholView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */; };
 		A5EFE3B92CA032BF00B54E98 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B82CA032BB00B54E98 /* MyButton.swift */; };
+		A5EFE3BF2CA1896700B54E98 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3BE2CA1896300B54E98 /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,7 @@
 		A502C70F2C9877BB00A06E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A502C7122C9877BB00A06E78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorUI+Extension.swift"; sourceTree = "<group>"; };
-		A502C71D2C98787400A06E78 /* AlcoholLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevel.swift; sourceTree = "<group>"; };
+		A502C71D2C98787400A06E78 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		A502C71F2C98788C00A06E78 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		A502C7212C987FF100A06E78 /* AlcoholLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevelView.swift; sourceTree = "<group>"; };
 		A502C7232C9973BF00A06E78 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonView.swift; sourceTree = "<group>"; };
 		A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlcoholView.swift; sourceTree = "<group>"; };
 		A5EFE3B82CA032BB00B54E98 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		A5EFE3BE2CA1896300B54E98 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		A502C71C2C98784F00A06E78 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A5EFE3BE2CA1896300B54E98 /* EmptyView.swift */,
 				A5EFE3B82CA032BB00B54E98 /* MyButton.swift */,
 				A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */,
 				A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */,
@@ -179,7 +182,7 @@
 			children = (
 				A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */,
 				A5286E572C9B1343001FC8D0 /* AuthManager.swift */,
-				A502C71D2C98787400A06E78 /* AlcoholLevel.swift */,
+				A502C71D2C98787400A06E78 /* AppData.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -279,9 +282,10 @@
 				A502C7352C99C67500A06E78 /* ProfilePictureView.swift in Sources */,
 				A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */,
 				A502C70C2C9877BA00A06E78 /* HowDrunkRU_App.swift in Sources */,
+				A5EFE3BF2CA1896700B54E98 /* EmptyView.swift in Sources */,
 				A502C7392C9AC0C800A06E78 /* StatistiquePage.swift in Sources */,
 				A5286E552C9B0727001FC8D0 /* LoginPage.swift in Sources */,
-				A502C71E2C98787400A06E78 /* AlcoholLevel.swift in Sources */,
+				A502C71E2C98787400A06E78 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
