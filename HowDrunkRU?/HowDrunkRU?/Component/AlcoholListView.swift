@@ -84,6 +84,8 @@ struct AlcoholListView: View {
         calculatedAlcoholRate = appData.calculateAlcoholRate(user: currentUser, alcohol: selectedAlcohol, quantityInCL: quantityValue)
         
         appData.updateAlcoholRate(newAlcoholRate: appData.alcoholRate + calculatedAlcoholRate)
+        print(appData.alcoholRate)
+
         showRateAlert = true
         quantity = ""
     }
@@ -97,7 +99,7 @@ struct AlcoholListView: View {
                 errorMessage = "User should enter their info before."
                 showErrorAlert = true
             } else {
-                print("User data fetched: \(String(describing: self.currentUser))")
+                // TODO: print data's fetched.
             }
         }
     }

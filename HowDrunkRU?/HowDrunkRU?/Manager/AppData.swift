@@ -26,6 +26,6 @@ class AppData: ObservableObject {
     }
     
     func updateAlcoholRate(newAlcoholRate: Double) {
-        alcoholRate = newAlcoholRate
+        self.alcoholRate = newAlcoholRate
     }
 }
