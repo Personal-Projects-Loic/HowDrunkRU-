@@ -12,6 +12,7 @@ import FirebaseAuth
 class DataManager: ObservableObject {
     @Published var alcohol: [Alcohol] = []
     @Published var userInfos: UserInfos = UserInfos(id: "", size: 0, weight: 0, gender: "")
+    @Published var alcoholRateSaver: AlcoholRateSaver = AlcoholRateSaver(id: "", alcoholRateSaved: 0.00, time: 0)
     
     init() {
         fetchAlcohol()
@@ -126,5 +127,46 @@ class DataManager: ObservableObject {
             }
         }
     }
-
+    
+    func fetchAlcoholRate(uid: String, completion: @escaping (AlcoholRateSaver?) -> Void) {
+        let db = Firestore.firestore()
+        let ref = db.collection("AlcoholRate").document(uid)
+        
+        ref.getDocument() { document, error in
+            if let document = document, document.exists {
+                let data = document.data()
+                let newAlcoholRate = data?["alcoholRate"] as? Double ?? 0
+                let lastUpdate = data?["time"] as? TimeInterval ?? 0
+                
+                completion(AlcoholRateSaver(id: uid, alcoholRateSaved: newAlcoholRate, time: lastUpdate))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func saveAlcoholRate(alcoholRate: Double, time: TimeInterval) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let db = Firestore.firestore()
+        let ref = db.collection("AlcoholRate").document(uid)
+        
+        let dataSaver: [String: Any] = [
+            "id": uid,
+            "alcoholRate": alcoholRate,
+            "time": time
+        ]
+        
+        ref.setData(dataSaver, merge: true) { error in
+            if let error = error {
+                print("Error adding user data: \(error.localizedDescription)")
+            } else {
+                print("Data saved successfully")
+            }
+        }
+    }
+    
+    func updateAlcoholRate(alcoholRate: Double, time: TimeInterval) {
+        self.alcoholRateSaver.alcoholRateSaved = alcoholRate
+        self.alcoholRateSaver.time = time
+    }
 }

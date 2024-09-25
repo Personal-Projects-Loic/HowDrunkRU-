@@ -33,7 +33,7 @@
 		A5CD6EBA2C9C676800CFF8D6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A5CD6EB92C9C676800CFF8D6 /* FirebaseFirestore */; };
 		A5CD6EBC2C9C7B8900CFF8D6 /* Delcaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */; };
 		A5CD6EBE2C9C7CA300CFF8D6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */; };
-		A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */; };
+		A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListPage.swift */; };
 		A5CD6EC22C9DAB5100CFF8D6 /* SignButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */; };
 		A5EFE3B62C9DB51900B54E98 /* NewAlcoholView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */; };
 		A5EFE3B92CA032BF00B54E98 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFE3B82CA032BB00B54E98 /* MyButton.swift */; };
@@ -66,7 +66,7 @@
 		A5871C2B2C9B735800A642BA /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delcaration.swift; sourceTree = "<group>"; };
 		A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholListView.swift; sourceTree = "<group>"; };
+		A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholListPage.swift; sourceTree = "<group>"; };
 		A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonView.swift; sourceTree = "<group>"; };
 		A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlcoholView.swift; sourceTree = "<group>"; };
 		A5EFE3B82CA032BB00B54E98 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
@@ -132,7 +132,6 @@
 		A502C7192C98782600A06E78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */,
 				A502C71A2C98783A00A06E78 /* ColorUI+Extension.swift */,
 			);
 			path = Extensions;
@@ -144,7 +143,6 @@
 				A5EFE3BE2CA1896300B54E98 /* EmptyView.swift */,
 				A5EFE3B82CA032BB00B54E98 /* MyButton.swift */,
 				A5EFE3B52C9DB50E00B54E98 /* NewAlcoholView.swift */,
-				A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListView.swift */,
 				A5CD6EC12C9DAB5000CFF8D6 /* SignButtonView.swift */,
 				A5871C2B2C9B735800A642BA /* SignOutButton.swift */,
 				A5286E522C9AF637001FC8D0 /* TextFieldView.swift */,
@@ -173,6 +171,7 @@
 				A502C72E2C998E3B00A06E78 /* ProfilePage.swift */,
 				A502C7322C9998BC00A06E78 /* GamePage.swift */,
 				A502C7382C9AC0C800A06E78 /* StatistiquePage.swift */,
+				A5CD6EBF2C9C7F1700CFF8D6 /* AlcoholListPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 				A5CD6EBD2C9C7C9F00CFF8D6 /* DataManager.swift */,
 				A5286E572C9B1343001FC8D0 /* AuthManager.swift */,
 				A502C71D2C98787400A06E78 /* AppData.swift */,
+				A5CD6EBB2C9C7B8200CFF8D6 /* Delcaration.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				A502C71B2C98783B00A06E78 /* ColorUI+Extension.swift in Sources */,
 				A502C7202C98788C00A06E78 /* TitleView.swift in Sources */,
 				A502C7372C99D0FA00A06E78 /* MyListView.swift in Sources */,
-				A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListView.swift in Sources */,
+				A5CD6EC02C9C7F1D00CFF8D6 /* AlcoholListPage.swift in Sources */,
 				A502C72D2C9988D100A06E78 /* HomePage.swift in Sources */,
 				A502C7332C9998BC00A06E78 /* GamePage.swift in Sources */,
 				A5EFE3B92CA032BF00B54E98 /* MyButton.swift in Sources */,

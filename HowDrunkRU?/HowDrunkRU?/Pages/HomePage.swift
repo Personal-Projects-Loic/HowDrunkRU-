@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @EnvironmentObject var alcoholLevel: AppData
+    @EnvironmentObject var appData: AppData
 
     var body: some View {
         ZStack {

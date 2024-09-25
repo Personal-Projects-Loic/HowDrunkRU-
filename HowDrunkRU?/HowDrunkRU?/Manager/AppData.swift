@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import Foundation
+import Combine
 
 class AppData: ObservableObject {
     @Published var alcoholRate: Double = 0.00
-    @Published var alcohol: Float = 0.00
     @Published var multiplicator: Int = 1
-    @Published var size: Int = 0
-    @Published var weight: Int = 0
+    
+    private let defaults = UserDefaults.standard
 
     func calculateAlcoholRate(user: UserInfos, alcohol: Alcohol, quantityInCL: Double) -> Double {
         let quantityInML = quantityInCL * 10
@@ -27,5 +28,10 @@ class AppData: ObservableObject {
     
     func updateAlcoholRate(newAlcoholRate: Double) {
         self.alcoholRate = newAlcoholRate
+        defaults.set(alcoholRate, forKey: "alcoholRate")
+    }
+    
+    func loadAlcoholRate() {
+        let savedName = defaults.string(forKey: "alcoholRate")
     }
 }

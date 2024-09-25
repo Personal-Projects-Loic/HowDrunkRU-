@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct AlcoholListView: View {
+struct AlcoholListPage: View {
     @EnvironmentObject var dataManager: DataManager
     @EnvironmentObject var appData: AppData
     @Environment(\.presentationMode) var presentationMode
@@ -23,30 +23,32 @@ struct AlcoholListView: View {
     @State private var quantity: String = ""
 
     var body: some View {
-        NavigationView {
-            VStack {
-                alcoholList
-                    .navigationTitle("Alcohol List")
-                    .onAppear(perform: fetchUserData)
-                    .alert(isPresented: $showErrorAlert) {
-                        Alert(title: Text("Error"),
-                              message: Text(errorMessage),
-                              dismissButton: .default(Text("OK")))
-                    }
-                    .alert("Enter quantity in cL", isPresented: $showingAlert) {
-                        TextField("Enter quantity in cL", text: $quantity)
-                            .keyboardType(.decimalPad)
-                        Button("OK", action: submit)
-                    } message: {
-                        Text("Please enter the quantity of alcohol you consumed.")
-                    }
-                    .alert(isPresented: $showRateAlert) {
-                        Alert(title: Text("Calculated Alcohol Rate"),
-                              message: Text("Your alcohol rate is \(calculatedAlcoholRate, specifier: "%.2f") ‰."),
-                              dismissButton: .default(Text("OK")) {
-                                  presentationMode.wrappedValue.dismiss()
-                              })
-                    }
+        ZStack {
+            NavigationView {
+                VStack {
+                    alcoholList
+                        .navigationTitle("Alcohol List")
+                        .onAppear(perform: fetchUserData)
+                        .alert(isPresented: $showErrorAlert) {
+                            Alert(title: Text("Error"),
+                                  message: Text(errorMessage),
+                                  dismissButton: .default(Text("OK")))
+                        }
+                        .alert("Enter quantity in cL", isPresented: $showingAlert) {
+                            TextField("Enter quantity in cL", text: $quantity)
+                                .keyboardType(.decimalPad)
+                            Button("OK", action: submit)
+                        } message: {
+                            Text("Please enter the quantity of alcohol you consumed.")
+                        }
+                        .alert(isPresented: $showRateAlert) {
+                            Alert(title: Text("Are you having fun?"),
+                                  message: Text("Drink a glass of water between every drink"),
+                                  dismissButton: .default(Text("OK")) {
+                                presentationMode.wrappedValue.dismiss()
+                            })
+                        }
+                }
             }
         }
     }
@@ -106,7 +108,7 @@ struct AlcoholListView: View {
 }
 
 #Preview {
-    AlcoholListView()
+    AlcoholListPage()
         .environmentObject(DataManager())
         .environmentObject(AppData())
 }

@@ -11,7 +11,7 @@ struct AddButton: View {
     @EnvironmentObject var dataManager: DataManager
     
     var body: some View {
-        NavigationLink(destination: AlcoholListView()) {
+        NavigationLink(destination: AlcoholListPage()) {
             Image("bottle")
                 .resizable()
                 .padding()

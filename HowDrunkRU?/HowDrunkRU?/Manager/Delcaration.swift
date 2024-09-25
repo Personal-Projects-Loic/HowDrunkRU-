@@ -20,3 +20,9 @@ struct UserInfos: Identifiable {
     var weight: Int
     var gender: String
 }
+
+struct AlcoholRateSaver: Identifiable {
+    var id: String
+    var alcoholRateSaved: Double
+    var time: TimeInterval
+}

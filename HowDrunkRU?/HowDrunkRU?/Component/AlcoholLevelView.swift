@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlcoholLevelView: View {
     @EnvironmentObject var appData: AppData
-    
+  
     var body: some View {
         VStack {
             Text("\(appData.alcoholRate, specifier: "%.2f")g")
@@ -18,7 +18,7 @@ struct AlcoholLevelView: View {
                 .foregroundStyle(Color(UIColor.lightYellow))
                 .font(.title2)
             
-            switch appData.alcohol {
+            switch appData.alcoholRate {
             case 0:
                 Text("You're sober, gg")
                     .foregroundStyle(Color(UIColor.lightYellow))
@@ -47,6 +47,11 @@ struct AlcoholLevelView: View {
                 Text("Dude wtf")
                     .foregroundStyle(Color(UIColor.lightYellow))
             }
+        }
+        .onAppear {
+            print("Before load", appData.alcoholRate)
+            appData.loadAlcoholRate()
+            print("after load", appData.alcoholRate)
         }
     }
 }
