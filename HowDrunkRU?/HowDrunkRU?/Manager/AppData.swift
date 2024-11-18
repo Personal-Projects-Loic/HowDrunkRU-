@@ -25,6 +25,20 @@ class AppData: ObservableObject {
         let alcoholRate = (pureAlcoholGrams / (weightInGrams * r)) * 1000
         return alcoholRate
     }
+
+    func calculateCurrentAlcoholRate(user: UserInfos, alcohol: Alcohol, quantityInCL: Double, consumptionTime: Date, currentTime: Date) -> Double {
+        /* TODO: code the difference of alcohol rate after 5min
+         - While alcoholRate > 0 {
+            - Should be called only when the user consumed alcohol
+            - lastAcoholRate =
+            - 0,15g/L loss of alcohol rate every hour -> every 5min = (0,15g/L / 60) * 5
+            - actualAlcoholRate = lastAcoholRate - (0,15 / 60) * 5
+         - }
+        */
+        return 0.0
+    }
+
+
     
     func updateAlcoholRate(newAlcoholRate: Double) {
         self.alcoholRate = newAlcoholRate
@@ -32,6 +46,6 @@ class AppData: ObservableObject {
     }
     
     func loadAlcoholRate() {
-        let savedName = defaults.string(forKey: "alcoholRate")
+        let _ = defaults.string(forKey: "alcoholRate")
     }
 }
